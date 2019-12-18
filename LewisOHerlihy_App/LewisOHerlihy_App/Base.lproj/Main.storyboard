@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball.png" id="wMo-gJ-Hnc" customClass="DragImageView" customModule="LewisOHerlihy_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="146" width="118" height="83"/>
+                                <rect key="frame" x="0.0" y="162" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

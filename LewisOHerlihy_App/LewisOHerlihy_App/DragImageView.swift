@@ -24,19 +24,27 @@ var startLocation: CGPoint?
     
     let dx = currentLocation!.x - startLocation!.x
     let dy = currentLocation!.y - startLocation!.y
+ 
+//    var cx = self.center.x+dx
+//    if (cx > 50) {
+//        cx = 50
+//    }
+//
+//    self.center = CGPoint(x: cx, y: self.center.y+dy)
+    // movement constrain
     var newCenter = CGPoint(x: self.center.x+dx, y: self.center.y+dy)
-    
-    
+
+
     let halfx = self.bounds.midX
     newCenter.x = max(halfx, newCenter.x)
     newCenter.x = min(self.superview!.bounds.width -
         (W*0.83), newCenter.y)
-    
+
     let halfy = self.bounds.midY
     newCenter.y = max(halfy + (H*0.30), newCenter.y)
     newCenter.y = min(self.superview!.bounds.height -
         (H*0.37), newCenter.y)
-    
+
     self.center = newCenter
     
   }
