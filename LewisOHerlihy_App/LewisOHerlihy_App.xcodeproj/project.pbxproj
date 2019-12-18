@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F633AAED23A98B3700673A21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633AAEC23A98B3700673A21 /* AppDelegate.swift */; };
+		F633AAEF23A98B3700673A21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633AAEE23A98B3700673A21 /* SceneDelegate.swift */; };
+		F633AAF123A98B3700673A21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633AAF023A98B3700673A21 /* ViewController.swift */; };
+		F633AAF423A98B3700673A21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F633AAF223A98B3700673A21 /* Main.storyboard */; };
+		F633AAF623A98B3800673A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F633AAF523A98B3800673A21 /* Assets.xcassets */; };
+		F633AAF923A98B3800673A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F633AAF723A98B3800673A21 /* LaunchScreen.storyboard */; };
+		F633AB0423A98B3800673A21 /* LewisOHerlihy_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633AB0323A98B3800673A21 /* LewisOHerlihy_AppTests.swift */; };
+		F633AB0F23A98B3800673A21 /* LewisOHerlihy_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633AB0E23A98B3800673A21 /* LewisOHerlihy_AppUITests.swift */; };
+		F633AB1F23A9901000673A21 /* DragImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F633AB1E23A9901000673A21 /* DragImageView.swift */; };
+		F633AB2123A99C8100673A21 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = F633AB2023A99C8100673A21 /* ball.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F633AB0023A98B3800673A21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F633AAE123A98B3700673A21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F633AAE823A98B3700673A21;
+			remoteInfo = LewisOHerlihy_App;
+		};
+		F633AB0B23A98B3800673A21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F633AAE123A98B3700673A21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F633AAE823A98B3700673A21;
+			remoteInfo = LewisOHerlihy_App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F633AAE923A98B3700673A21 /* LewisOHerlihy_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LewisOHerlihy_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F633AAEC23A98B3700673A21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F633AAEE23A98B3700673A21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F633AAF023A98B3700673A21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F633AAF323A98B3700673A21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F633AAF523A98B3800673A21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F633AAF823A98B3800673A21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F633AAFA23A98B3800673A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F633AAFF23A98B3800673A21 /* LewisOHerlihy_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LewisOHerlihy_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F633AB0323A98B3800673A21 /* LewisOHerlihy_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LewisOHerlihy_AppTests.swift; sourceTree = "<group>"; };
+		F633AB0523A98B3800673A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F633AB0A23A98B3800673A21 /* LewisOHerlihy_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LewisOHerlihy_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F633AB0E23A98B3800673A21 /* LewisOHerlihy_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LewisOHerlihy_AppUITests.swift; sourceTree = "<group>"; };
+		F633AB1023A98B3800673A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F633AB1E23A9901000673A21 /* DragImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragImageView.swift; sourceTree = "<group>"; };
+		F633AB2023A99C8100673A21 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F633AAE623A98B3700673A21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F633AAFC23A98B3800673A21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F633AB0723A98B3800673A21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F633AAE023A98B3700673A21 = {
+			isa = PBXGroup;
+			children = (
+				F633AAEB23A98B3700673A21 /* LewisOHerlihy_App */,
+				F633AB0223A98B3800673A21 /* LewisOHerlihy_AppTests */,
+				F633AB0D23A98B3800673A21 /* LewisOHerlihy_AppUITests */,
+				F633AAEA23A98B3700673A21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F633AAEA23A98B3700673A21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F633AAE923A98B3700673A21 /* LewisOHerlihy_App.app */,
+				F633AAFF23A98B3800673A21 /* LewisOHerlihy_AppTests.xctest */,
+				F633AB0A23A98B3800673A21 /* LewisOHerlihy_AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F633AAEB23A98B3700673A21 /* LewisOHerlihy_App */ = {
+			isa = PBXGroup;
+			children = (
+				F633AAEC23A98B3700673A21 /* AppDelegate.swift */,
+				F633AAEE23A98B3700673A21 /* SceneDelegate.swift */,
+				F633AAF023A98B3700673A21 /* ViewController.swift */,
+				F633AAF223A98B3700673A21 /* Main.storyboard */,
+				F633AB2023A99C8100673A21 /* ball.png */,
+				F633AB1E23A9901000673A21 /* DragImageView.swift */,
+				F633AAF523A98B3800673A21 /* Assets.xcassets */,
+				F633AAF723A98B3800673A21 /* LaunchScreen.storyboard */,
+				F633AAFA23A98B3800673A21 /* Info.plist */,
+			);
+			path = LewisOHerlihy_App;
+			sourceTree = "<group>";
+		};
+		F633AB0223A98B3800673A21 /* LewisOHerlihy_AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F633AB0323A98B3800673A21 /* LewisOHerlihy_AppTests.swift */,
+				F633AB0523A98B3800673A21 /* Info.plist */,
+			);
+			path = LewisOHerlihy_AppTests;
+			sourceTree = "<group>";
+		};
+		F633AB0D23A98B3800673A21 /* LewisOHerlihy_AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F633AB0E23A98B3800673A21 /* LewisOHerlihy_AppUITests.swift */,
+				F633AB1023A98B3800673A21 /* Info.plist */,
+			);
+			path = LewisOHerlihy_AppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F633AAE823A98B3700673A21 /* LewisOHerlihy_App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F633AB1323A98B3800673A21 /* Build configuration list for PBXNativeTarget "LewisOHerlihy_App" */;
+			buildPhases = (
+				F633AAE523A98B3700673A21 /* Sources */,
+				F633AAE623A98B3700673A21 /* Frameworks */,
+				F633AAE723A98B3700673A21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LewisOHerlihy_App;
+			productName = LewisOHerlihy_App;
+			productReference = F633AAE923A98B3700673A21 /* LewisOHerlihy_App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F633AAFE23A98B3800673A21 /* LewisOHerlihy_AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F633AB1623A98B3800673A21 /* Build configuration list for PBXNativeTarget "LewisOHerlihy_AppTests" */;
+			buildPhases = (
+				F633AAFB23A98B3800673A21 /* Sources */,
+				F633AAFC23A98B3800673A21 /* Frameworks */,
+				F633AAFD23A98B3800673A21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F633AB0123A98B3800673A21 /* PBXTargetDependency */,
+			);
+			name = LewisOHerlihy_AppTests;
+			productName = LewisOHerlihy_AppTests;
+			productReference = F633AAFF23A98B3800673A21 /* LewisOHerlihy_AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F633AB0923A98B3800673A21 /* LewisOHerlihy_AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F633AB1923A98B3800673A21 /* Build configuration list for PBXNativeTarget "LewisOHerlihy_AppUITests" */;
+			buildPhases = (
+				F633AB0623A98B3800673A21 /* Sources */,
+				F633AB0723A98B3800673A21 /* Frameworks */,
+				F633AB0823A98B3800673A21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F633AB0C23A98B3800673A21 /* PBXTargetDependency */,
+			);
+			name = LewisOHerlihy_AppUITests;
+			productName = LewisOHerlihy_AppUITests;
+			productReference = F633AB0A23A98B3800673A21 /* LewisOHerlihy_AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F633AAE123A98B3700673A21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Lewis O'Herlihy";
+				TargetAttributes = {
+					F633AAE823A98B3700673A21 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					F633AAFE23A98B3800673A21 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = F633AAE823A98B3700673A21;
+					};
+					F633AB0923A98B3800673A21 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = F633AAE823A98B3700673A21;
+					};
+				};
+			};
+			buildConfigurationList = F633AAE423A98B3700673A21 /* Build configuration list for PBXProject "LewisOHerlihy_App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F633AAE023A98B3700673A21;
+			productRefGroup = F633AAEA23A98B3700673A21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F633AAE823A98B3700673A21 /* LewisOHerlihy_App */,
+				F633AAFE23A98B3800673A21 /* LewisOHerlihy_AppTests */,
+				F633AB0923A98B3800673A21 /* LewisOHerlihy_AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F633AAE723A98B3700673A21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F633AAF923A98B3800673A21 /* LaunchScreen.storyboard in Resources */,
+				F633AAF623A98B3800673A21 /* Assets.xcassets in Resources */,
+				F633AB2123A99C8100673A21 /* ball.png in Resources */,
+				F633AAF423A98B3700673A21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F633AAFD23A98B3800673A21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F633AB0823A98B3800673A21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F633AAE523A98B3700673A21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F633AAF123A98B3700673A21 /* ViewController.swift in Sources */,
+				F633AAED23A98B3700673A21 /* AppDelegate.swift in Sources */,
+				F633AB1F23A9901000673A21 /* DragImageView.swift in Sources */,
+				F633AAEF23A98B3700673A21 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F633AAFB23A98B3800673A21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F633AB0423A98B3800673A21 /* LewisOHerlihy_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F633AB0623A98B3800673A21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F633AB0F23A98B3800673A21 /* LewisOHerlihy_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F633AB0123A98B3800673A21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F633AAE823A98B3700673A21 /* LewisOHerlihy_App */;
+			targetProxy = F633AB0023A98B3800673A21 /* PBXContainerItemProxy */;
+		};
+		F633AB0C23A98B3800673A21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F633AAE823A98B3700673A21 /* LewisOHerlihy_App */;
+			targetProxy = F633AB0B23A98B3800673A21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F633AAF223A98B3700673A21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F633AAF323A98B3700673A21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F633AAF723A98B3800673A21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F633AAF823A98B3800673A21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F633AB1123A98B3800673A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F633AB1223A98B3800673A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F633AB1423A98B3800673A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LewisOHerlihy_App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.LewisOHerlihy-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F633AB1523A98B3800673A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LewisOHerlihy_App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.LewisOHerlihy-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F633AB1723A98B3800673A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LewisOHerlihy_AppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.LewisOHerlihy-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LewisOHerlihy_App.app/LewisOHerlihy_App";
+			};
+			name = Debug;
+		};
+		F633AB1823A98B3800673A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LewisOHerlihy_AppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.LewisOHerlihy-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LewisOHerlihy_App.app/LewisOHerlihy_App";
+			};
+			name = Release;
+		};
+		F633AB1A23A98B3800673A21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LewisOHerlihy_AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.LewisOHerlihy-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LewisOHerlihy_App;
+			};
+			name = Debug;
+		};
+		F633AB1B23A98B3800673A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LewisOHerlihy_AppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app.LewisOHerlihy-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LewisOHerlihy_App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F633AAE423A98B3700673A21 /* Build configuration list for PBXProject "LewisOHerlihy_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F633AB1123A98B3800673A21 /* Debug */,
+				F633AB1223A98B3800673A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F633AB1323A98B3800673A21 /* Build configuration list for PBXNativeTarget "LewisOHerlihy_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F633AB1423A98B3800673A21 /* Debug */,
+				F633AB1523A98B3800673A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F633AB1623A98B3800673A21 /* Build configuration list for PBXNativeTarget "LewisOHerlihy_AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F633AB1723A98B3800673A21 /* Debug */,
+				F633AB1823A98B3800673A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F633AB1923A98B3800673A21 /* Build configuration list for PBXNativeTarget "LewisOHerlihy_AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F633AB1A23A98B3800673A21 /* Debug */,
+				F633AB1B23A98B3800673A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F633AAE123A98B3700673A21 /* Project object */;
+}
