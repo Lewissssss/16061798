@@ -10,9 +10,11 @@ import UIKit
 
 class DragImageView: UIImageView {
 
+    var myDelegate: viewDelegate?
     var startLocation: CGPoint?
     let W = UIScreen.main.bounds.width
     let H = UIScreen.main.bounds.height
+    
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
        startLocation = touches.first?.location(in: self)
@@ -44,7 +46,7 @@ class DragImageView: UIImageView {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.center.x = 27
         self.center.y = H*0.5
-    //  self.myDelegate7.spawnBoulder()
+        //self.myDelegate?.spawnball()
     }
     
 }
