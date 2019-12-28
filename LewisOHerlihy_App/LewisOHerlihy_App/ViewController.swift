@@ -15,16 +15,19 @@ protocol viewDelegate {
 
 class ViewController: UIViewController, viewDelegate {
     
-    //let W = UIScreen.main.bounds.width
-    //let H = UIScreen.main.bounds.height
+    let W = UIScreen.main.bounds.width
+    let H = UIScreen.main.bounds.height
     
     func spawnBall() {
         // print("hello")
-        let BallObject = UIImageView(image: nil)
-        BallObject.image = UIImage(named: "ball.png")
-        BallObject.frame = CGRect(x: 0, y: 0, width: 45, height: 45)
-        self.view.addSubview(BallObject)
-       //boulderArray.append(BallObject)
+        let ballView = UIImageView(image: nil)
+        ballView.image = UIImage(named: "ball.png")
+        ballView.frame = CGRect(x: 0, y: 0, width: 45, height: 45)
+        self.view.addSubview(ballView)
+        
+        
+        self.view.bringSubviewToFront(ballView)
+        //boulderArray.append(BallObject)
         
     }
 
@@ -36,10 +39,11 @@ class ViewController: UIViewController, viewDelegate {
         //ballObject = UIImageView(frame:CGRect(x: 0, y: 0, width: 45, height: 45));
         //ballObject.image = UIImage(named: "ball.png")
         //self.view.addSubview(ballObject)
-    
+       // self.view.bringSubviewToFront(ballObject)
         //weak var ballObject: DragImageView!
-        self.myDelegate
-           
+        //	self.myDelegate
+        
+        // self.view.bringSubviewToFront(ballView)
        
     }
    

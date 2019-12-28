@@ -48,6 +48,8 @@ class DragImageView: UIImageView {
         self.center.x = 27
         self.center.y = H*0.5
         self.myDelegate?.spawnBall()
+        
+        
     }
     
 }
