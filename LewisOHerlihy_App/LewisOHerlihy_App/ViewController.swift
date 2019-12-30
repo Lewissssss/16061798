@@ -34,6 +34,13 @@ class ViewController: UIViewController, viewDelegate {
         self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x:0, y:300), for: ballView)
         dynamicAnimator.addBehavior(dynamicItemBehaviour)
     
+        collisionBehaviour = UICollisionBehavior(items: [ballView])
+        dynamicItemBehaviour.addItem(ballView)
+        collisionBehaviour.addItem(ballView)
+        
+        dynamicAnimator.addBehavior(collisionBehaviour)
+        // collisionBehaviour.addBoundary(withIdentifier:
+        
         //self.view.bringSubviewToFront(ballView)
         //boulderArray.append(BallObject)
         
