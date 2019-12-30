@@ -18,6 +18,10 @@ class ViewController: UIViewController, viewDelegate {
     let W = UIScreen.main.bounds.width
     let H = UIScreen.main.bounds.height
     
+    var dynamicAnimator: UIDynamicAnimator!
+    var collisionBehaviour: UICollisionBehavior!
+    var dynamicItemBehaviour: UIDynamicItemBehavior!
+    
     func spawnBall() {
         // print("hello")
         let ballView = UIImageView(image: nil)
@@ -25,8 +29,12 @@ class ViewController: UIViewController, viewDelegate {
         ballView.frame = CGRect(x: 27, y: H*0.5, width: 45, height: 45)
         self.view.addSubview(ballView)
         
-        
-        self.view.bringSubviewToFront(ballView)
+        dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ballView])
+        self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x:0, y:300), for: ballView)
+        dynamicAnimator.addBehavior(dynamicItemBehaviour)
+    
+        //self.view.bringSubviewToFront(ballView)
         //boulderArray.append(BallObject)
         
     }
