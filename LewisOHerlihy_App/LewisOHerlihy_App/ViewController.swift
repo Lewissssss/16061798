@@ -8,12 +8,21 @@
 
 import UIKit
 
-protocol viewDelegate {
-    func spawnBall()
-
+protocol ShotDelegate {
+    func UpdateAngle(x: Int, y: Int)
 }
 
-class ViewController: UIViewController, viewDelegate {
+protocol viewDelegate {
+    func spawnBall()
+}
+
+class ViewController: UIViewController, viewDelegate, ShotDelegate {
+    func UpdateAngle(x: Int, y: Int) {
+        angleX = x
+        angleY = y
+       // print(angleX)
+       // print(angleY)
+    }
     
     let W = UIScreen.main.bounds.width
     let H = UIScreen.main.bounds.height
@@ -21,6 +30,11 @@ class ViewController: UIViewController, viewDelegate {
     var dynamicAnimator: UIDynamicAnimator!
     var collisionBehaviour: UICollisionBehavior!
     var dynamicItemBehaviour: UIDynamicItemBehavior!
+    var gravityBehavior: UIGravityBehavior!
+    var angleX = Int()
+    var angleY = Int()
+    
+
     
     func spawnBall() {
         // print("hello")
@@ -34,18 +48,37 @@ class ViewController: UIViewController, viewDelegate {
         self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x:0, y:300), for: ballView)
         dynamicAnimator.addBehavior(dynamicItemBehaviour)
     
-        collisionBehaviour = UICollisionBehavior(items: [ballView])
+       //gravityBehavior = UIGravityBehavior(items: [ballView])
+       //dynamicAnimator.addBehavior(gravityBehavior)
+        
+        collisionBehaviour = UICollisionBehavior(items: [ballView, ballView])
+        collisionBehaviour.translatesReferenceBoundsIntoBoundary = true
+        dynamicAnimator.addBehavior(collisionBehaviour)
         dynamicItemBehaviour.addItem(ballView)
         collisionBehaviour.addItem(ballView)
         
-        dynamicAnimator.addBehavior(collisionBehaviour)
-        // collisionBehaviour.addBoundary(withIdentifier:
         
+        
+        dynamicAnimator.addBehavior(collisionBehaviour)
+        
+        collisionBehaviour.addBoundary(withIdentifier: "BackBoundary" as NSCopying, from: CGPoint(x: 0, y:0 ), to: CGPoint(x: 0, y: W));
+
+        collisionBehaviour.addBoundary(withIdentifier: "TopBoundary" as NSCopying, from: CGPoint(x: 0, y:0 ), to: CGPoint(x: H, y: 1000100));
+            
+        collisionBehaviour.addBoundary(withIdentifier: "BottomBoundary" as NSCopying, from: CGPoint(x: 0, y:H ), to: CGPoint(x: 1000, y: W))
+        
+    //func updateAngle(x: Int, y: Int) {
+     //    angleX = x
+      //   angleY = y
+      //  }
+
         //self.view.bringSubviewToFront(ballView)
+        
         //boulderArray.append(BallObject)
         
     }
 
+    
     @IBOutlet weak var BallDelegate: DragImageView!
     
     override func viewDidLoad() {
@@ -53,13 +86,7 @@ class ViewController: UIViewController, viewDelegate {
         // Do any additional setup after loading the view.
         BallDelegate.myDelegate = self
         
-        //var ballObject :UIImageView
-        //ballObject = UIImageView(frame:CGRect(x: 0, y: 0, width: 45, height: 45));
-        //ballObject.image = UIImage(named: "ball.png")
-        //self.view.addSubview(ballObject)
-       // self.view.bringSubviewToFront(ballObject)
-        //weak var ballObject: DragImageView!
-        //	self.myDelegate
+  
         
         // self.view.bringSubviewToFront(ballView)
        

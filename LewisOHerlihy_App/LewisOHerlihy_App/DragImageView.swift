@@ -11,6 +11,7 @@ import UIKit
 class DragImageView: UIImageView {
 
     var myDelegate: viewDelegate?
+    var AngelDelegate:ShotDelegate?
     var startLocation: CGPoint?
     
     let W = UIScreen.main.bounds.width
@@ -43,6 +44,7 @@ class DragImageView: UIImageView {
             (H*0.37), newCenter.y)
         
         self.center = newCenter
+      //  self.AngelDelegate?.UpdateAngle
   }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.center.x = 27
