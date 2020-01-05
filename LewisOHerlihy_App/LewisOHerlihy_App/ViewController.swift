@@ -8,21 +8,15 @@
 
 import UIKit
 
-protocol ShotDelegate {
-    func UpdateAngle(x: Int, y: Int)
-}
+
 
 protocol viewDelegate {
     func spawnBall()
+   
 }
 
-class ViewController: UIViewController, viewDelegate, ShotDelegate {
-    func UpdateAngle(x: Int, y: Int) {
-        angleX = x
-        angleY = y
-       // print(angleX)
-       // print(angleY)
-    }
+class ViewController: UIViewController, viewDelegate {
+
     
     let W = UIScreen.main.bounds.width
     let H = UIScreen.main.bounds.height
@@ -67,10 +61,10 @@ class ViewController: UIViewController, viewDelegate, ShotDelegate {
             
         collisionBehaviour.addBoundary(withIdentifier: "BottomBoundary" as NSCopying, from: CGPoint(x: 0, y:H ), to: CGPoint(x: 1000, y: W))
         
-    //func updateAngle(x: Int, y: Int) {
-     //    angleX = x
-      //   angleY = y
-      //  }
+    func updateAngle(x: Int, y: Int) {
+        angleX = x*8
+        angleY = y*8
+    }
 
         //self.view.bringSubviewToFront(ballView)
         
@@ -78,6 +72,7 @@ class ViewController: UIViewController, viewDelegate, ShotDelegate {
         
     }
 
+ 
     
     @IBOutlet weak var BallDelegate: DragImageView!
     
@@ -86,7 +81,10 @@ class ViewController: UIViewController, viewDelegate, ShotDelegate {
         // Do any additional setup after loading the view.
         BallDelegate.myDelegate = self
         
-  
+         let birdOne = UIImageView(image: nil)
+         birdOne.image = UIImage(named: "bird1.png")
+         birdOne.frame = CGRect(x: 100, y: 100, width: 30, height: 30)
+         self.view.addSubview(birdOne)
         
         // self.view.bringSubviewToFront(ballView)
        
