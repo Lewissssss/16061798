@@ -44,7 +44,7 @@ class DragImageView: UIImageView {
             (H*0.37), newCenter.y)
         
         self.center = newCenter
-        //self.myDelegate?.updateAngle()
+        //	self.myDelegate?.updateAngle()
   }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.center.x = 27

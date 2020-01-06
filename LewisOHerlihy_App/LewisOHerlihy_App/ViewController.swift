@@ -73,6 +73,7 @@ class ViewController: UIViewController, viewDelegate {
     }
 
  
+    @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var BallDelegate: DragImageView!
     
