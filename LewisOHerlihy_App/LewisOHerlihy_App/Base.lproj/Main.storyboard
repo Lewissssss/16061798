@@ -31,8 +31,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="BallDelegate" destination="DWO-Tn-hzg" id="BtF-gD-wgF"/>
-                        <outlet property="scoreLabel" destination="6cA-DA-cXu" id="nLN-10-HFz"/>
+                        <outlet property="BallDelegate" destination="DWO-Tn-hzg" id="8aX-JJ-5d6"/>
+                        <outlet property="scoreLabel" destination="8bC-Xf-vdC" id="acp-Ax-JtO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@ import UIKit
 
 protocol viewDelegate {
     func spawnBall()
+    
    
 }
 
@@ -28,7 +29,9 @@ class ViewController: UIViewController, viewDelegate {
     var angleX = Int()
     var angleY = Int()
     
-
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var BallDelegate: DragImageView!
+    
     
     func spawnBall() {
         // print("hello")
@@ -73,9 +76,9 @@ class ViewController: UIViewController, viewDelegate {
     }
 
  
-    @IBOutlet weak var scoreLabel: UILabel!
     
-    @IBOutlet weak var BallDelegate: DragImageView!
+    
+   // @IBOutlet weak var BallDelegate: DragImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
