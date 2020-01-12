@@ -31,7 +31,7 @@ class ViewController: UIViewController, viewDelegate {
     var collisionBehaviour: UICollisionBehavior!
     
     
-   // var timer = Timer()
+    var timer = Timer()
     
     @IBOutlet weak var BallDelegate: DragImageView!
     @IBOutlet weak var currentLevel: UILabel!
@@ -81,14 +81,15 @@ class ViewController: UIViewController, viewDelegate {
             
         collisionBehaviour.addBoundary(withIdentifier: "BottomBoundary" as NSCopying, from: CGPoint(x: 0, y:h ), to: CGPoint(x: 1000, y: w))
         
-       // collisionBehaviour.action = {
-         //   for ballView in self.ballArray{
-           //     if ballView.frame.intersects(bird1.frame){
-                    
-             //   }
+    //    collisionBehaviour.action = {
+     //     for ballView in self.ballArray{
+      //      if ballView.frame.intersects(bird1.frame){
                 
-         //   }
-    //    }
+                    
+          //     }
+                
+     //   }
+ // }
         
         
         
@@ -109,16 +110,16 @@ class ViewController: UIViewController, viewDelegate {
         let bird4 = UIImageView (image: nil)
         
         bird1.image = UIImage(named: "bird1.png")
-        bird1.frame = CGRect(x: self.w*0.85, y: self.h*0.035, width: self.w*0.12, height: self.h*0.22)
+        bird1.frame = CGRect(x: self.w*0.85, y: self.h*0.035, width: 60, height: 60)
         
         bird2.image = UIImage(named: "bird2.png")
-        bird2.frame = CGRect(x: self.w*0.85, y: self.h*0.3, width: self.w*0.1, height: self.h*0.10)
+        bird2.frame = CGRect(x: self.w*0.85, y: self.h*0.3, width: 60, height: 60)
         
         bird3.image = UIImage(named: "bird3.png")
-        bird3.frame = CGRect(x: self.w*0.85, y: self.h*0.525, width: self.w*0.1, height: self.h*0.18)
+        bird3.frame = CGRect(x: self.w*0.85, y: self.h*0.525, width: 60, height: 60)
         
         bird4.image = UIImage(named: "bird4.png")
-        bird4.frame = CGRect(x: self.w*0.85, y: self.h*0.75, width: self.w*0.12, height:  self.h*0.12)
+        bird4.frame = CGRect(x: self.w*0.85, y: self.h*0.75, width: 60, height: 60)
         
         birdArray.append(bird1)
         birdArray.append(bird2)
@@ -129,14 +130,23 @@ class ViewController: UIViewController, viewDelegate {
        timer in self.view.addSubview(self.birdArray[Int.random(in: 0...3)])
         if self.timerCount <= 0 {
          timer.invalidate()
+           
             bird1.removeFromSuperview()
             bird2.removeFromSuperview()
             bird3.removeFromSuperview()
             bird4.removeFromSuperview()
-   }
+ 
+
+                    
+                
+            
+            
+    
+        
+    }
   }
  
-    }
+}
     
     
     
