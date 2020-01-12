@@ -22,6 +22,9 @@
 		8B44A5EF23C78D66000EFF0F /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B44A5EE23C78D66000EFF0F /* ball.png */; };
 		8B44A5F123C78D6B000EFF0F /* aim.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B44A5F023C78D6B000EFF0F /* aim.png */; };
 		8B44A5F323C78E3C000EFF0F /* DragImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B44A5F223C78E3C000EFF0F /* DragImageView.swift */; };
+		8BB173CD23C8E19E0026E8E7 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB173CC23C8E19E0026E8E7 /* square.png */; };
+		8BB173CF23C8E1AE0026E8E7 /* rectangle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BB173CE23C8E1AE0026E8E7 /* rectangle.jpg */; };
+		8BB173D123C8E1B40026E8E7 /* replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB173D023C8E1B40026E8E7 /* replay.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		8B44A5EE23C78D66000EFF0F /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = SOURCE_ROOT; };
 		8B44A5F023C78D6B000EFF0F /* aim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aim.png; sourceTree = SOURCE_ROOT; };
 		8B44A5F223C78E3C000EFF0F /* DragImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragImageView.swift; sourceTree = "<group>"; };
+		8BB173CC23C8E19E0026E8E7 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = SOURCE_ROOT; };
+		8BB173CE23C8E1AE0026E8E7 /* rectangle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rectangle.jpg; sourceTree = SOURCE_ROOT; };
+		8BB173D023C8E1B40026E8E7 /* replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = replay.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,13 +123,16 @@
 				8B44A5B823C78CA8000EFF0F /* SceneDelegate.swift */,
 				8B44A5BA23C78CA8000EFF0F /* ViewController.swift */,
 				8B44A5F223C78E3C000EFF0F /* DragImageView.swift */,
+				8B44A5BC23C78CA8000EFF0F /* Main.storyboard */,
 				8B44A5F023C78D6B000EFF0F /* aim.png */,
 				8B44A5EE23C78D66000EFF0F /* ball.png */,
 				8B44A5E623C78D47000EFF0F /* bird1.png */,
 				8B44A5EC23C78D61000EFF0F /* bird2.png */,
 				8B44A5EA23C78D5B000EFF0F /* bird3.png */,
 				8B44A5E823C78D51000EFF0F /* bird4.png */,
-				8B44A5BC23C78CA8000EFF0F /* Main.storyboard */,
+				8BB173CC23C8E19E0026E8E7 /* square.png */,
+				8BB173CE23C8E1AE0026E8E7 /* rectangle.jpg */,
+				8BB173D023C8E1B40026E8E7 /* replay.png */,
 				8B44A5BF23C78CA9000EFF0F /* Assets.xcassets */,
 				8B44A5C123C78CA9000EFF0F /* LaunchScreen.storyboard */,
 				8B44A5C423C78CA9000EFF0F /* Info.plist */,
@@ -255,12 +264,15 @@
 			files = (
 				8B44A5C323C78CA9000EFF0F /* LaunchScreen.storyboard in Resources */,
 				8B44A5ED23C78D61000EFF0F /* bird2.png in Resources */,
+				8BB173CD23C8E19E0026E8E7 /* square.png in Resources */,
 				8B44A5C023C78CA9000EFF0F /* Assets.xcassets in Resources */,
+				8BB173CF23C8E1AE0026E8E7 /* rectangle.jpg in Resources */,
 				8B44A5F123C78D6B000EFF0F /* aim.png in Resources */,
 				8B44A5EB23C78D5B000EFF0F /* bird3.png in Resources */,
 				8B44A5E723C78D47000EFF0F /* bird1.png in Resources */,
 				8B44A5BE23C78CA8000EFF0F /* Main.storyboard in Resources */,
 				8B44A5EF23C78D66000EFF0F /* ball.png in Resources */,
+				8BB173D123C8E1B40026E8E7 /* replay.png in Resources */,
 				8B44A5E923C78D51000EFF0F /* bird4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

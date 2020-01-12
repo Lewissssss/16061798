@@ -21,15 +21,33 @@ class ViewController: UIViewController, viewDelegate {
     let h = UIScreen.main.bounds.height
     var angleX = Int()
     var angleY = Int()
+    var timerCount = 20
+    var score = 0
+    
     
     var dynamicAnimator: UIDynamicAnimator!
     var dynamicItemBehaviour: UIDynamicItemBehavior!
     var gravityBehaviour: UIGravityBehavior!
     var collisionBehaviour: UICollisionBehavior!
     
+    
+   // var timer = Timer()
+    
     @IBOutlet weak var BallDelegate: DragImageView!
-      
-    // var ballArray: [UIImage] = []
+    @IBOutlet weak var currentLevel: UILabel!
+    @IBOutlet weak var scorecountLabel: UILabel!
+    @IBOutlet var currentTimer: UILabel!
+    
+    var ballArray = [UIImageView]()
+    var birdArray = [UIImageView]()
+    
+    func myTimer() {
+        currentTimer.text = "Time: \(timerCount)"
+        Timer.scheduledTimer(withTimeInterval: 1.1, repeats: true) { timer in
+            self.timerCount -= 1
+        }
+       
+    }
     
     func spawnBall() {
         let ballView = UIImageView (image: nil)
@@ -37,20 +55,20 @@ class ViewController: UIViewController, viewDelegate {
         ballView.frame = CGRect(x: 27, y: h*0.5, width: 45, height: 45)
         self.view.addSubview(ballView)
         
-        var ballArray: [UIImage] = []
-        ballArray.append(UIImage(named: "ball.png")!)
-        
+       // var ballArray: [UIImage] = []
+        ballArray.append(ballView)
         
         dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
         
-        dynamicItemBehaviour = UIDynamicItemBehavior(items: [ballView])
+        dynamicItemBehaviour = UIDynamicItemBehavior(items: ballArray)
         self.dynamicItemBehaviour.addLinearVelocity(CGPoint(x: angleX, y: angleY), for: ballView)
         dynamicAnimator.addBehavior(dynamicItemBehaviour)
-        
-     //   gravityBehaviour = UIGravityBehavior(items: [ballView])
+    
+       
+        //gravityBehaviour = UIGravityBehavior(items: [ballView])
       //  dynamicAnimator.addBehavior(gravityBehaviour)
         
-        collisionBehaviour = UICollisionBehavior(items: [ballView])
+        collisionBehaviour = UICollisionBehavior(items: ballArray)
         collisionBehaviour.translatesReferenceBoundsIntoBoundary = true
         dynamicAnimator.addBehavior(collisionBehaviour)
         dynamicItemBehaviour.addItem(ballView)
@@ -62,6 +80,15 @@ class ViewController: UIViewController, viewDelegate {
         collisionBehaviour.addBoundary(withIdentifier: "TopBoundary" as NSCopying, from: CGPoint(x: 0, y:0 ), to: CGPoint(x: h, y: 1000100));
             
         collisionBehaviour.addBoundary(withIdentifier: "BottomBoundary" as NSCopying, from: CGPoint(x: 0, y:h ), to: CGPoint(x: 1000, y: w))
+        
+       // collisionBehaviour.action = {
+         //   for ballView in self.ballArray{
+           //     if ballView.frame.intersects(bird1.frame){
+                    
+             //   }
+                
+         //   }
+    //    }
         
         
         
@@ -93,27 +120,41 @@ class ViewController: UIViewController, viewDelegate {
         bird4.image = UIImage(named: "bird4.png")
         bird4.frame = CGRect(x: self.w*0.85, y: self.h*0.75, width: self.w*0.12, height:  self.h*0.12)
         
-      // Timer.scheduledTimer9withTimeInterval: 2, repeats: true) {timer in
-      //  self.view.addSubviewself.birdArray[Int.random(in: 0...3)])
-       // if self.timeCountDown <= 0 {
-        //    timer.invalidate()
-        //    bird1.removeFromSuperview()
-         //   bird2.removeFromSuperview()
-         //   bird3.removeFromSuperview()
-         //   bird4.removeFromSuperview()
-    //    }
+        birdArray.append(bird1)
+        birdArray.append(bird2)
+        birdArray.append(bird3)
+        birdArray.append(bird4)
         
-      
+   Timer.scheduledTimer(withTimeInterval: 2, repeats: true) {
+       timer in self.view.addSubview(self.birdArray[Int.random(in: 0...3)])
+        if self.timerCount <= 0 {
+         timer.invalidate()
+            bird1.removeFromSuperview()
+            bird2.removeFromSuperview()
+            bird3.removeFromSuperview()
+            bird4.removeFromSuperview()
+   }
+  }
+ 
     }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        myTimer()
+        spawnBirds()
         BallDelegate.myDelegate = self
+      //  let bird1 = UIImageView (image: nil)
+      //  bird1.image = UIImage(named: "bird1.png")
+      //  bird1.frame = CGRect(x: self.w*0.85, y: self.h*0.035, width: 100, height: 100)
+      //  self.view.addSubview(bird1)
         
+        //var Countdown2 =
     }
 
 
 }
+
 
