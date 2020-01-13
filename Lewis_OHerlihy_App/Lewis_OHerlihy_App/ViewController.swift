@@ -22,7 +22,7 @@ class ViewController: UIViewController, viewDelegate {
     var angleX = Int()
     var angleY = Int()
     var timerCount = 20
-    var score = 0
+    var scorecount = 0
     
     
     var dynamicAnimator: UIDynamicAnimator!
@@ -36,18 +36,34 @@ class ViewController: UIViewController, viewDelegate {
     @IBOutlet weak var BallDelegate: DragImageView!
     @IBOutlet weak var currentLevel: UILabel!
     @IBOutlet weak var scorecountLabel: UILabel!
-    @IBOutlet var currentTimer: UILabel!
+ //   @IBOutlet var currentTimer: UILabel!
     
     var ballArray = [UIImageView]()
     var birdArray = [UIImageView]()
     
     func myTimer() {
-        currentTimer.text = "Time: \(timerCount)"
+     //   currentTimer.text = "Time: \(timerCount)"
         Timer.scheduledTimer(withTimeInterval: 1.1, repeats: true) { timer in
             self.timerCount -= 1
+           
+            if self.timerCount == 0{
+                timer.invalidate()
+                let endGame = UIImageView(image: nil)
+                endGame.image = UIImage(named: "replay.png")
+                endGame.frame = UIScreen.main.bounds
+                self.view.addSubview(endGame)
+                self.view.bringSubviewToFront(self.scorecountLabel)
+            }
+            
         }
        
     }
+    
+    func scorecountLevel() {
+       // scorecountLabel.text = "Score:"\(score)"
+        
+    }
+    
     
     func spawnBall() {
         let ballView = UIImageView (image: nil)
@@ -125,6 +141,20 @@ class ViewController: UIViewController, viewDelegate {
         birdArray.append(bird2)
         birdArray.append(bird3)
         birdArray.append(bird4)
+        
+        self.collisionBehaviour = UICollisionBehavior(items:[bird1])
+       // self.dynamicAnimator.addBehavior(self.collisionBehaviour)
+        self.collisionBehaviour.action = {
+            for ballView in self.ballArray{
+                if ballView.frame.intersects(bird1.frame){
+                    if bird1.superview != nil {
+                        self.scorecount += 1
+                    }
+                    
+                }
+            }
+        }
+
         
    Timer.scheduledTimer(withTimeInterval: 2, repeats: true) {
        timer in self.view.addSubview(self.birdArray[Int.random(in: 0...3)])
